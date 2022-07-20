@@ -4,6 +4,9 @@ services:
     volumes:
       - ./etc/nginx/conf.d:/etc/nginx/conf.d
       - ./public:/public
+      - type: bind
+        source: ./logs/nginx
+        target: /var/log/nginx
     ports:
       - published: 8080
         target: 80
