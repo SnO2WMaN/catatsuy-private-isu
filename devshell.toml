@@ -3,8 +3,14 @@ packages = [
   "alejandra",
   "dprint",
   "alp",
+  "hey",
+  "jq",
 ]
 
 [[commands]]
 package = "treefmt"
 category = "formatter"
+
+[[commands]]
+name = "benchmark"
+command = "docker run --network host -i private-isu-benchmarker /opt/go/bin/benchmarker -t http://172.17.0.1:8080 -u /opt/go/userdata | jq > $PRJ_ROOT/benchmark/$(date +%Y%m%d_%H%M%S).json"
