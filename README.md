@@ -4,8 +4,8 @@
 
 本リポジトリが書籍の題材になりました。詳しくは以下のURLをご覧ください。
 
-* [達人が教えるWebパフォーマンスチューニング 〜ISUCONから学ぶ高速化の実践：書籍案内｜技術評論社](https://gihyo.jp/book/2022/978-4-297-12846-3)
-* [tatsujin-web-performance/tatsujin-web-performance: 達人が教えるWebパフォーマンスチューニング〜ISUCONから学ぶ高速化の実践](https://github.com/tatsujin-web-performance/tatsujin-web-performance)
+- [達人が教えるWebパフォーマンスチューニング 〜ISUCONから学ぶ高速化の実践：書籍案内｜技術評論社](https://gihyo.jp/book/2022/978-4-297-12846-3)
+- [tatsujin-web-performance/tatsujin-web-performance: 達人が教えるWebパフォーマンスチューニング〜ISUCONから学ぶ高速化の実践](https://github.com/tatsujin-web-performance/tatsujin-web-performance)
 
 ハッシュタグ： `#ISUCON本`
 
@@ -15,16 +15,16 @@
 
 ［2016年開催時のブログ］
 
-* ISUCON6出題チームが社内ISUCONを開催！AMIも公開！！ - pixiv inside [archive] https://devpixiv.hatenablog.com/entry/2016/05/18/115206
-* 社内ISUCONを公開したら広く使われた話 - pixiv inside [archive] https://devpixiv.hatenablog.com/entry/2016/09/26/130112
+- ISUCON6出題チームが社内ISUCONを開催！AMIも公開！！ - pixiv inside [archive] https://devpixiv.hatenablog.com/entry/2016/05/18/115206
+- 社内ISUCONを公開したら広く使われた話 - pixiv inside [archive] https://devpixiv.hatenablog.com/entry/2016/09/26/130112
 
 過去ISUCON公式で練習問題として推奨されたことがある。
 
-* ISUCON初心者のためのISUCON7予選対策 : ISUCON公式Blog https://isucon.net/archives/50697356.html
+- ISUCON初心者のためのISUCON7予選対策 : ISUCON公式Blog https://isucon.net/archives/50697356.html
 
 ［2021年開催時のブログ］
 
-* 社内ISUCON “TIMES-ISUCON” を開催しました！ | PR TIMES 開発者ブログ https://developers.prtimes.jp/2021/06/04/times-isucon-1/
+- 社内ISUCON “TIMES-ISUCON” を開催しました！ | PR TIMES 開発者ブログ https://developers.prtimes.jp/2021/06/04/times-isucon-1/
 
 ## ディレクトリ構成
 
@@ -36,8 +36,8 @@
 └── webapp       # 各言語の参考実装
 ```
 
-* [manual.md](/manual.md)は当日マニュアル。一部社内イベントを意識した記述があるので注意すること。
-* [public_manual.md](/public_manual.md) は事前公開レギュレーション
+- [manual.md](/manual.md)は当日マニュアル。一部社内イベントを意識した記述があるので注意すること。
+- [public_manual.md](/public_manual.md) は事前公開レギュレーション
 
 ## OS
 
@@ -45,21 +45,21 @@ Ubuntu 20.04 / 22.04
 
 ## 起動方法
 
-* Ruby/Go/PHPの3言語が用意されており、デフォルトはRubyが起動する
-  * Node.jsは現状メンテナンスされていない
-  * AMI・Vagrantで他の言語の実装を動かす場合は[manual.md](/manual.md)を参考にする
-* AMI・Docker Compose・Vagrantが用意されている
-  * 手元で適当に動かすことも難しくない
-  * Ansibleを動かせば、他の環境でも動くはず
-  * cloud-initも利用可能
+- Ruby/Go/PHPの3言語が用意されており、デフォルトはRubyが起動する
+  - Node.jsは現状メンテナンスされていない
+  - AMI・Vagrantで他の言語の実装を動かす場合は[manual.md](/manual.md)を参考にする
+- AMI・Docker Compose・Vagrantが用意されている
+  - 手元で適当に動かすことも難しくない
+  - Ansibleを動かせば、他の環境でも動くはず
+  - cloud-initも利用可能
 
 ### AMI
 
 セキュリティのアップデートなどは行わないので自己責任で利用してください。Node.jsのセットアップはskipしているので、Ruby/PHP/Goのみ利用可能。
 
-* 競技者用インスタンスはSecurity groupで80番ポートを公開する必要がある
-  * Network settingsで「Allow HTTP traffic from the internet」にチェックを入れてもよい
-* ベンチマーカー用インスタンスはコンピューティング最適化インスタンスでそれなりのスペックでの利用を推奨
+- 競技者用インスタンスはSecurity groupで80番ポートを公開する必要がある
+  - Network settingsで「Allow HTTP traffic from the internet」にチェックを入れてもよい
+- ベンチマーカー用インスタンスはコンピューティング最適化インスタンスでそれなりのスペックでの利用を推奨
 
 ベンチマーカー用インスタンスのベンチマーカー実行方法
 
@@ -81,33 +81,32 @@ $ /home/isucon/private_isu/benchmarker/bin/benchmarker -u /home/isucon/private_i
 
 競技者用 (Ubuntu 22.04):
 
-| 用途   |        AMI ID         |                 AMI name                 | 推奨インスタンスタイプ |
-| ------ | :-------------------: | :--------------------------------------: | ---------------------- |
-| x86_64 | ami-06c39e451ff9930db | catatsuy_private_isu_amd64_2204_20220703 | c6i.large              |
-| arm64  | ami-08ece261e7317422f | catatsuy_private_isu_arm64_2204_20220703 | c6g.large              |
+| 用途     |        AMI ID         |                 AMI name                 | 推奨インスタンスタイプ |
+| ------ | :-------------------: | :--------------------------------------: | ----------- |
+| x86_64 | ami-06c39e451ff9930db | catatsuy_private_isu_amd64_2204_20220703 | c6i.large   |
+| arm64  | ami-08ece261e7317422f | catatsuy_private_isu_arm64_2204_20220703 | c6g.large   |
 
 ベンチマーカー (Ubuntu 20.04):
 
-| 用途   |        AMI ID         |                 AMI name                  | 推奨インスタンスタイプ |
-| ------ | :-------------------: | :---------------------------------------: | ---------------------- |
-| x86_64 | ami-024cfcacc753fa53e | catatsuy_private_isu_bench_amd64_20220529 | c6i.xlarge             |
-| arm64  | ami-035922e4d248319af | catatsuy_private_isu_bench_arm64_20220529 | c6g.xlarge             |
-
+| 用途     |        AMI ID         |                 AMI name                  | 推奨インスタンスタイプ |
+| ------ | :-------------------: | :---------------------------------------: | ----------- |
+| x86_64 | ami-024cfcacc753fa53e | catatsuy_private_isu_bench_amd64_20220529 | c6i.xlarge  |
+| arm64  | ami-035922e4d248319af | catatsuy_private_isu_bench_arm64_20220529 | c6g.xlarge  |
 
 ### 手元で動かす
 
-__いずれの手順もディスク容量が十分にあるマシン上で行うこと__
+**いずれの手順もディスク容量が十分にあるマシン上で行うこと**
 
-* アプリケーションは各言語の開発環境とMySQL・memcachedがインストールされていれば動くはず
-* ベンチマーカーはGoの開発環境とuserdataがあれば動く
-* Dockerとvagrantはメモリが潤沢なマシンで実行すること
+- アプリケーションは各言語の開発環境とMySQL・memcachedがインストールされていれば動くはず
+- ベンチマーカーはGoの開発環境とuserdataがあれば動く
+- Dockerとvagrantはメモリが潤沢なマシンで実行すること
 
 #### MacやLinux上で適当に動かす
 
 MySQLとmemcachedを起動した上で以下の手順を実行。
 
-* Ruby実装以外は各言語実装の動かし方を各自調べること
-* MySQLのrootユーザーのパスワードが設定されていない前提になっているので、設定されている場合は適宜読み替えること
+- Ruby実装以外は各言語実装の動かし方を各自調べること
+- MySQLのrootユーザーのパスワードが設定されていない前提になっているので、設定されている場合は適宜読み替えること
 
 ```sh
 curl -L -O https://github.com/catatsuy/private-isu/releases/download/img/dump.sql.bz2
@@ -221,6 +220,6 @@ ISUCON過去問題の環境を「さくらのクラウド」で構築する | �
 
 ## 他の言語実装
 
-* Rust実装 https://github.com/Romira915/private-isu-rust
-* Python実装 https://github.com/methane/pixiv-isucon2016-python
-* Scala実装 https://github.com/catatsuy/private-isu/pull/140
+- Rust実装 https://github.com/Romira915/private-isu-rust
+- Python実装 https://github.com/methane/pixiv-isucon2016-python
+- Scala実装 https://github.com/catatsuy/private-isu/pull/140

@@ -2,8 +2,8 @@
 
 ### require
 
-* Redis
-* Sidekiq
+- Redis
+- Sidekiq
 
 ```
 apt install -y libmysqlclient-dev
